@@ -15,6 +15,17 @@ On the client side, two main details are needed to connect to a server -
 
 In this Java chat application, the client socket connects to the server socket using these details. A new thread is created on the client for each incoming message, enabling real-time chat functionality.
 
+### Setting up The Project
+
+Run the Application
+
+First Run the Server.java file in the terminal or command Prompt for better visual. Using the following command,
+`java Server.java`
+
+Then Run the ClientGUI.java in as my terminal tabs as you want using the the following command,
+`java ClientGUI.java`
+
+---
 
 `Server.java`
 
