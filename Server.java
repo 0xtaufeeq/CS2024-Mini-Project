@@ -7,8 +7,9 @@ public class Server {
     private static CopyOnWriteArrayList<ClientHandler> clients = new CopyOnWriteArrayList<>(); 
 
     public static void main(String[] args) { 
+        ServerSocket serverSocket = null;
         try { 
-            ServerSocket serverSocket = new ServerSocket(PORT); 
+            serverSocket = new ServerSocket(PORT); 
             System.out.println("Server is running and waiting for connections.."); 
 
             while (true) { 
@@ -21,7 +22,15 @@ public class Server {
             } 
         } catch (IOException e) { 
             e.printStackTrace(); 
-        } 
+        } finally {
+            if (serverSocket != null && !serverSocket.isClosed()) {
+                try {
+                    serverSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     } 
  
     public static void broadcast(String message, ClientHandler sender) { 
