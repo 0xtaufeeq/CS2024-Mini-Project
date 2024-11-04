@@ -6,14 +6,14 @@ Java sockets allow communication between two different Java Runtime Environments
 1. **Connection-Oriented** - Uses TCP (Transmission Control Protocol) to establish a stable connection between client and server, ensuring data is sent and received reliably.
 2. **Connectionless** - Uses UDP (User Datagram Protocol) to send data quickly, without guaranteeing a stable connection.
 
-### Setting Up a Java Client
-
 On the client side, two main details are needed to connect to a server -
 
 - **IP Address** - The network location of the server.
 - **Port Number** - The entry point for server communication.
 
 In this Java chat application, the client socket connects to the server socket using these details. A new thread is created on the client for each incoming message, enabling real-time chat functionality.
+
+---
 
 ### Setting up The Project
 
