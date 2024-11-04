@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.net.Socket;
 
-public class ChatClientGUI {
+public class ClientGUI {
     private static final String SERVER_ADDRESS = "localhost";
     private static final int SERVER_PORT = 1234;
     private Socket socket;
@@ -14,7 +14,7 @@ public class ChatClientGUI {
     private JTextArea textArea;
     private JTextField textField;
 
-    public ChatClientGUI() {
+    public ClientGUI() {
         JFrame frame = new JFrame("Java Chat Application By Taufeeq and Vasista");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 300);
@@ -81,6 +81,6 @@ public class ChatClientGUI {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(ChatClientGUI::new);
+        SwingUtilities.invokeLater(ClientGUI::new);
     }
 }
